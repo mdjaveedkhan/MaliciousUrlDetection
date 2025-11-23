@@ -23,7 +23,7 @@ app.register_blueprint(views.userbp.user_bp)
 # from flask import Flask, render_template, request
 @app.route("/")
 def home():
-    return render_template("home.html")
+    return render_template("templates/home.html")
 
 
 @app.route('/result', methods=['POST', 'GET'])
@@ -42,7 +42,7 @@ def predict():
         # 3pred = "It is {0:.2f} % safe to go ".format(y_pro_phishing*100)
         # xx =y_pred
         name = convertion(url, int(y_pred))
-        return render_template("predict.html", name=name)
+        return render_template("templates/predict.html", name=name)
 
 
 @app.route('/usecases', methods=['GET', 'POST'])
@@ -52,4 +52,5 @@ def usecases():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
