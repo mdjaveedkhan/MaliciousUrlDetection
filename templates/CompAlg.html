@@ -1,0 +1,131 @@
+{% include "header_admin.html" %}
+<div class="container">
+    <form action="http://localhost:5000/eval_alg" method="post">
+    <table> <tr><td style="vertical-align: top">
+   <div id="menu">
+  <ul>
+
+    <li onclick="hide_knn()">K-Nearest Neighbour</li>
+    <li onclick="hide_rf()">Random Forest </li>
+    <li onclick="hide_dt()">Decision Trees</li>
+    <li onclick="hide_gb()">Gradient Boost</li>
+    <li onclick="hide_cb()">Catboost</li>
+    <li onclick="hide_ca()">Compare Algorithms</li>
+
+  </ul>
+</div></td>
+
+
+        <td>
+
+<div class="loader" id="gear" style="display: none; margin: 150px"><div></div><div></div></div>
+<div id="AccDisplay"></div>
+     </td>
+</tr>
+</table>
+        <div id="KNN" style="display: none">
+            <img src="../static/vis/knn_acc.jpg" width="600px" height="300px"><br>
+
+        </div>
+        <div id="RF" style="display: none" >
+            <img src="../static/vis/rf_acc.jpg" width="600px" height="300px"><br>
+
+        </div>
+
+        <div id="DT" style="display: none">
+            <img src="../static/vis/dt_acc.jpg" width="600px" height="300px"><br>
+
+        </div>
+
+        <div id="CB" style="display: none">
+            <img src="../static/vis/cb_acc.jpg" width="600px" height="300px"><br>
+
+        </div>
+        <div id="GB" style="display: none">
+            <img src="../static/vis/gb_acc.jpg" width="600px" height="300px"><br>
+
+        </div>
+
+        <div id="CA" style="display: none">
+            <img src="../static/vis/AlgComp.jpg" width="750px" height="350px"><br>
+        </div>
+</form>
+</div>
+
+	</div>
+
+<script>
+var myVar;
+
+function hide_rf() {
+  document.getElementById("AccDisplay").style.display = "none";
+  document.getElementById("gear").style.display = "block";
+  myVar = setTimeout(show_rf, 1500);
+}
+function show_rf() {
+document.getElementById("gear").style.display = "none";
+document.getElementById("AccDisplay").style.display = "block";
+document.getElementById('AccDisplay').innerHTML=document.getElementById('RF').innerHTML;
+}
+
+function hide_knn() {
+  document.getElementById("AccDisplay").style.display = "none";
+  document.getElementById("gear").style.display = "block";
+  myVar = setTimeout(show_knn, 1500);
+}
+function show_knn() {
+document.getElementById("gear").style.display = "none";
+document.getElementById("AccDisplay").style.display = "block";
+document.getElementById('AccDisplay').innerHTML=document.getElementById('KNN').innerHTML;
+}
+
+
+
+function hide_gb() {
+  document.getElementById("AccDisplay").style.display = "none";
+  document.getElementById("gear").style.display = "block";
+  myVar = setTimeout(show_gb, 1500);
+}
+function show_gb() {
+document.getElementById("gear").style.display = "none";
+document.getElementById("AccDisplay").style.display = "block";
+document.getElementById('AccDisplay').innerHTML=document.getElementById('GB').innerHTML;
+}
+
+function hide_dt() {
+  document.getElementById("AccDisplay").style.display = "none";
+  document.getElementById("gear").style.display = "block";
+  myVar = setTimeout(show_dt, 1500);
+}
+function show_dt() {
+document.getElementById("gear").style.display = "none";
+document.getElementById("AccDisplay").style.display = "block";
+document.getElementById('AccDisplay').innerHTML=document.getElementById('DT').innerHTML;
+}
+
+
+function hide_cb() {
+  document.getElementById("AccDisplay").style.display = "none";
+  document.getElementById("gear").style.display = "block";
+  myVar = setTimeout(show_cb, 1500);
+}
+function show_cb() {
+document.getElementById("gear").style.display = "none";
+document.getElementById("AccDisplay").style.display = "block";
+document.getElementById('AccDisplay').innerHTML=document.getElementById('CB').innerHTML;
+}
+
+function hide_ca() {
+  document.getElementById("AccDisplay").style.display = "none";
+  document.getElementById("gear").style.display = "block";
+  myVar = setTimeout(show_ca, 1500);
+}
+function show_ca() {
+document.getElementById("gear").style.display = "none";
+document.getElementById("AccDisplay").style.display = "block";
+document.getElementById('AccDisplay').innerHTML=document.getElementById('CA').innerHTML;
+}
+</script>
+</body>
+
+</html>

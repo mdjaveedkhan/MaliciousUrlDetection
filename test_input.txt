@@ -1,0 +1,6 @@
+Malicious:
+3
+
+Safe:
+https://icicibank.com
+https://www.google.com/

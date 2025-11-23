@@ -1,0 +1,16 @@
+[
+    {
+        "ML Model":"Gradient Boosting Classifier",
+        "Accuracy":0.974,
+        "f1_score":0.974,
+        "Recall":0.988,
+        "Precision":0.989
+    },
+    {
+        "ML Model":"Gradient Boosting Classifier",
+        "Accuracy":0.974,
+        "f1_score":0.974,
+        "Recall":0.988,
+        "Precision":0.989
+    }
+]

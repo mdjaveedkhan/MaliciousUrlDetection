@@ -1,0 +1,78 @@
+{% include "header_admin.html" %}
+<div class="container">
+    <table> <tr><td style="vertical-align: top">
+   <div id="menu">
+  <ul>
+
+    <li onclick="hide_tc()">Phishing Count</li>
+    <li onclick="hide_nl()">Feature Correlation Heatmap</li>
+    <li onclick="hide_gl()">Pairplot</li>
+
+  </ul>
+</div></td>
+        <td>
+
+<div class="loader" id="loader" style="display: none; margin: 150px"><div></div><div></div></div>
+<div id="AccDisplay"></div>
+     </td>
+</tr>
+</table>
+<div id="tc" style="display: none">
+     <img src="../static/vis/Phiscnt.jpg"  width="700px" height="350px">
+</div>
+
+<div id="nl" style="display: none">
+     <img src="../static/vis/FeatCorr.jpg"  width="700px" height="350px">
+</div>
+
+<div id="gl" style="display: none">
+     <img src="../static/vis/pairplot.jpg"  width="700px" height="350px">
+</div>
+
+
+</div>
+
+<script>
+var myVar;
+
+function hide_tc() {
+  document.getElementById("AccDisplay").style.display = "none";
+  document.getElementById("loader").style.display = "block";
+  myVar = setTimeout(show_tc, 1500);
+}
+
+function show_tc() {
+document.getElementById("loader").style.display = "none";
+document.getElementById("AccDisplay").style.display = "block";
+document.getElementById('AccDisplay').innerHTML=document.getElementById('tc').innerHTML;
+}
+
+function hide_nl() {
+    document.getElementById("AccDisplay").style.display = "none";
+  document.getElementById("loader").style.display = "block";
+  myVar = setTimeout(show_nl, 1500);
+}
+
+function show_nl() {
+document.getElementById("loader").style.display = "none";
+document.getElementById("AccDisplay").style.display = "block";
+document.getElementById('AccDisplay').innerHTML=document.getElementById('nl').innerHTML;
+}
+
+function hide_gl() {
+    document.getElementById("AccDisplay").style.display = "none";
+  document.getElementById("loader").style.display = "block";
+  myVar = setTimeout(show_gl, 1500);
+}
+
+function show_gl() {
+document.getElementById("loader").style.display = "none";
+document.getElementById("AccDisplay").style.display = "block";
+document.getElementById('AccDisplay').innerHTML=document.getElementById('gl').innerHTML;
+}
+
+
+</script>
+</body>
+
+</html>
